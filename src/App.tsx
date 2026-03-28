@@ -443,13 +443,13 @@ export default function App() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           <ResourceCard 
-            logo="https://www.vectorlogo.zone/logos/pexels/pexels-icon.svg"
+            logo="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fb/41/e2/fb41e217-1043-3c6c-804a-93a32aa7ec35/Placeholder.mill/200x200bb-75.webp"
             name="Pexels"
             description="High-quality free photos for any project."
             delay={0.1}
           />
           <ResourceCard 
-            logo="https://www.vectorlogo.zone/logos/unsplash/unsplash-icon.svg"
+            logo="https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/unsplash.svg"
             name="Unsplash"
             description="The internet's source for visuals."
             delay={0.2}
