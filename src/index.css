@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  
+  --color-primary: #6366f1;
+  --color-secondary: #ec4899;
+  --color-accent: #f59e0b;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-900;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .bg-premium-gradient {
+    background: radial-gradient(circle at top left, #4f46e5 0%, #7c3aed 30%, #db2777 100%);
+  }
+  
+  .bg-soft-gradient-1 {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
