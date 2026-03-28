@@ -66,10 +66,11 @@ const FeatureCard = ({ icon: Icon, title, description, gradient, delay }: {
   </motion.div>
 );
 
-const ResourceCard = ({ logo, name, description, delay }: { 
+const ResourceCard = ({ logo, name, description, url, delay }: { 
   logo: string, 
   name: string, 
   description: string,
+  url: string,
   delay: number
 }) => (
   <motion.div 
@@ -85,9 +86,14 @@ const ResourceCard = ({ logo, name, description, delay }: {
       <span className="ml-3 text-2xl font-black text-slate-800 tracking-tighter">{name}</span>
     </div>
     <p className="text-slate-500 text-sm mb-8 leading-relaxed">{description}</p>
-    <button className="w-full py-4 px-6 bg-slate-50 hover:bg-indigo-600 text-slate-600 hover:text-white rounded-2xl transition-all duration-300 text-sm font-bold flex items-center justify-center gap-2 border border-slate-100 hover:border-indigo-600 hover:scale-[1.02] active:scale-[0.98]">
+    <a 
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full py-4 px-6 bg-slate-50 hover:bg-indigo-600 text-slate-600 hover:text-white rounded-2xl transition-all duration-300 text-sm font-bold flex items-center justify-center gap-2 border border-slate-100 hover:border-indigo-600 hover:scale-[1.02] active:scale-[0.98]"
+    >
       Explore <ExternalLink className="w-4 h-4" />
-    </button>
+    </a>
   </motion.div>
 );
 
@@ -446,24 +452,28 @@ export default function App() {
             logo="/assets/pexels.svg"
             name="Pexels"
             description="High-quality free photos for any project."
+            url="https://www.pexels.com"
             delay={0.1}
           />
           <ResourceCard 
             logo="/assets/unsplash.svg"
             name="Unsplash"
             description="The internet's source for visuals."
+            url="https://unsplash.com"
             delay={0.2}
           />
           <ResourceCard 
             logo="/assets/pixabay.svg"
             name="Pixabay"
             description="Stunning free images & royalty free stock."
+            url="https://pixabay.com"
             delay={0.3}
           />
           <ResourceCard 
             logo="/assets/freepik.svg"
             name="Freepik"
             description="High-quality photos, vectors and PSD."
+            url="https://www.freepik.com"
             delay={0.4}
           />
         </div>
